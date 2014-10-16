@@ -55,6 +55,7 @@ public class KubernetesApiClient implements KubernetesAPIClientInterface{
 	@Override
 	public void deletePod(String podId) throws KubernetesClientException {
 		
+		api.deletePod(podId);
 	}
 
 	@Override

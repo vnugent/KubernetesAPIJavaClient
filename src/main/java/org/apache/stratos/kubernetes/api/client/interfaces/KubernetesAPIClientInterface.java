@@ -80,8 +80,9 @@ public interface KubernetesAPIClientInterface {
 	 * @throws KubernetesClientException
 	 */
 	@DELETE
+	@Path("/pods/{podId}")	
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void deletePod(String podId) throws KubernetesClientException;
+	public void deletePod(@PathParam("podId") String podId) throws KubernetesClientException;
 	
 	/* Replication Controller API */
 	
@@ -161,6 +162,7 @@ public interface KubernetesAPIClientInterface {
  	 * @throws KubernetesClientException
 	 */
 	@DELETE
+	@Path("/services/{serviceId}")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void deleteService(String serviceId) throws KubernetesClientException;
+	public void deleteService(@PathParam("serviceId") String serviceId) throws KubernetesClientException;
 }
